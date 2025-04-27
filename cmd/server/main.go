@@ -1,14 +1,11 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
+	"net/http",
+	"github.com/eloy3/linkvault/bookmarks/internal/bookmarks"
 )
 
-func pong(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "pong \n")
-}
 func main() {
-	http.HandleFunc("/ping", pong)
+	http.HandleFunc("/ping", handlers.pong)
 	http.ListenAndServe(":8080", nil)
 }
