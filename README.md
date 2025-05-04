@@ -11,7 +11,6 @@ It lets you organize, store, and open links easily from your terminal.
 - 🔍 TUI built with [`tview`](https://github.com/rivo/tview) for fast, keyboard-driven navigation
 - 🌐 REST API for fetching and managing bookmarks
 - 🧱 PostgreSQL database backend
-- 🧪 Simple local dev setup and testing
 
 ---
 
