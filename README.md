@@ -18,7 +18,6 @@ It lets you organize, store, and open links easily from your terminal.
 
 - **Backend**: Go (`net/http`), PostgreSQL, `database/sql`
 - **TUI**: Go + `tview`
-- **Dev Tools**: VS Code, Delve (for debugging), `curl` or Postman (for API testing)
 
 ---
 
