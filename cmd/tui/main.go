@@ -4,9 +4,16 @@ import (
 	"os/exec"
 
 	"github.com/rivo/tview"
+	"github.com/Eloy3/LinkVault/internal/db"
 )
 
 func main() {
+	
+	go err := server.StartServer(":8080")
+	if err != nil {
+		log.Fatalf("failed to start server: %v", err)
+	}
+
 	app := tview.NewApplication()
 
 	list := tview.NewList().
@@ -17,7 +24,7 @@ func main() {
 		})
 
 	list.SetSelectedFunc(func(index int, mainText, secondaryText string, shortcut rune) {
-		// Only open if not the Quit item
+		
 		if shortcut != 'q' {
 			openInBrowser(secondaryText)
 		}

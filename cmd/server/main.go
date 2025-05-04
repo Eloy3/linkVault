@@ -2,23 +2,15 @@ package main
 
 import (
 	"log"
-	"net/http"
 
-	"github.com/Eloy3/LinkVault/internal/bookmarks"
-
-	"github.com/Eloy3/LinkVault/internal/db"
+	"github.com/Eloy3/LinkVault/internal/server"
 )
 
 func main() {
-	err := db.Init()
+	err := server.StartServer(":8080")
 	if err != nil {
-		log.Fatalf("failed to initialize DB: %v", err)
+		log.Fatalf("failed to start server: %v", err)
+	}else {
+		log.Println("Server started on :8080")
 	}
-	defer db.DB.Close()
-
-	mux := http.NewServeMux()
-	bookmarks.Router(mux)
-
-	log.Println("Server running at http://localhost:8080")
-	http.ListenAndServe(":8080", mux)
 }
