@@ -10,7 +10,7 @@ func main() {
 	err := server.StartServer(":8080")
 	if err != nil {
 		log.Fatalf("failed to start server: %v", err)
-	}else {
+	} else {
 		log.Println("Server started on :8080")
 	}
 }

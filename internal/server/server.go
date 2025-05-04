@@ -1,10 +1,11 @@
 package server
 
 import (
-    "log"
-    "net/http"
-	"github.com/Eloy3/LinkVault/internal/db"
+	"log"
+	"net/http"
+
 	"github.com/Eloy3/LinkVault/internal/bookmarks"
+	"github.com/Eloy3/LinkVault/internal/db"
 )
 
 func StartServer(addr string) error {
@@ -13,7 +14,6 @@ func StartServer(addr string) error {
 	if err != nil {
 		log.Fatalf("failed to initialize DB: %v", err)
 	}
-	defer db.DB.Close()
 
 	// Initialize the server
 	mux := http.NewServeMux()
