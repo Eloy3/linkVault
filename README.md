@@ -1,4 +1,4 @@
-# LinkVault 🔖
+# LinkVault
 
 LinkVault is a personal bookmark manager with a RESTful API backend and a terminal-based user interface.  
 It lets you organize, store, and open links easily from your terminal.
@@ -22,7 +22,7 @@ It lets you organize, store, and open links easily from your terminal.
 
 ---
 
-### ⚙️ How It Works
+## ⚙️ How It Works
 
 1. **PostgreSQL Initialization**  
    The backend expects an existing PostgreSQL database.  
@@ -42,3 +42,26 @@ It lets you organize, store, and open links easily from your terminal.
 3. **Running the TUI**
     The terminal-based UI is launched separately. When started, it automatically fetches bookmarks from the API and displays them using tview.
     You can select a bookmark to open it in your browser directly from the terminal.
+
+---
+
+## 🔧 TODO / Roadmap
+
+- [ ] **Add full CRUD API**  
+  - [ ] POST endpoint to add new bookmarks  
+  - [ ] PUT/PATCH endpoint to update existing bookmarks  
+  - [ ] DELETE endpoint to remove bookmarks  
+- [ ] **Implement user authentication**  
+  - [ ] Token-based login (JWT)  
+  - [ ] Authenticated access to bookmark endpoints  
+- [ ] **Enhance bookmark structure**  
+  - [ ] Support for tags or categories  
+  - [ ] Add search/filter API (by tag, title, etc.)  
+- [ ] **Improve TUI**  
+  - [ ] Add filtering and search in the UI  
+  - [ ] Display tags or categories alongside bookmarks  
+  - [ ] Support keyboard shortcuts for quick navigation  
+- [ ] **Settings & Config**  
+  - [ ] Config file for default API URL, theme, etc.  
+  - [ ] TUI theming (light/dark modes)  
+
