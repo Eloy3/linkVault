@@ -8,16 +8,9 @@ It lets you organize, store, and open links easily from your terminal.
 ## 📦 Features
 
 - Store bookmarks with title, URL, description, and timestamp
-- TUI built with [`tview`](https://github.com/rivo/tview) for fast, keyboard-driven navigation
+- TUI built with [`tview`](https://github.com/rivo/tview) for keyboard-driven navigation
 - REST API for fetching and managing bookmarks
 - PostgreSQL database backend
-
----
-
-## 🧰 Tech Stack
-
-- **Backend**: Go (`net/http`), PostgreSQL, `database/sql`
-- **TUI**: Go + `tview`
 
 ---
 
